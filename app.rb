@@ -76,3 +76,17 @@ rescue OutOfStockError
   puts 'Sorry, out of stock. Ignoring'
 end
 # Should return OutOfStockError: 'LEGO Firehouse Headquarter' is out of stock.
+
+# Better ways to find transactions
+Transaction.find_by_product nanoblock
+
+# A way for customers to return items
+puts nanoblock.stock
+transaction2.cancel
+puts nanoblock.stock
+
+begin
+  transaction2.cancel
+rescue DuplicateCancelError
+  puts 'Sorry, item was already returned'
+end
