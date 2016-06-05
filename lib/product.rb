@@ -17,8 +17,20 @@ class Product
     end
   end
 
+  def in_stock?
+    @stock > 0
+  end
+
   def self.all
     @@products
+  end
+
+  def self.find_by_title(title)
+    @@products.select { |product| product.title == title }[0]
+  end
+
+  def self.in_stock()
+    @@products.select { |product| product.in_stock? }
   end
 
   def eql?(other)
