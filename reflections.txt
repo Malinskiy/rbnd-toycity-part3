@@ -1,0 +1,11 @@
+Q: How long did you spend working on this project?
+A: ~1 hour
+
+Q: What was the most rewarding challenge you conquered?
+A: equals + hashcode with set
+
+Q: What two additional features did you build? Why?
+A: Better ways to find transactions and A way for customers to return items. Easiest features I think :D
+
+Q: Where do you still have room to grow?
+A: Collections and lots of other classes in Ruby
