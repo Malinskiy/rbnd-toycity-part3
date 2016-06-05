@@ -34,17 +34,21 @@ puts products_in_stock.include?(firehouse) # Should return false
 
 # CUSTOMERS
 
-# Customer.new(name: "Walter Latimer")
-# Customer.new(name: "Julia Van Cleve")
+Customer.new(name: 'Walter Latimer')
+Customer.new(name: 'Julia Van Cleve')
 
 # puts Customer.all.count # Should return 2
 
-# Customer.new(name: "Walter Latimer")
+begin
+  Customer.new(name: 'Walter Latimer')
+rescue DuplicateCustomerError
+  puts 'Duplicate customer. Ignoring'
+end
 # Should return DuplicateCustomerError: 'Walter Latimer' already exists.
 
-# walter = Customer.find_by_name("Walter Latimer")
+walter = Customer.find_by_name('Walter Latimer')
 
-# puts walter.name # Should return "Walter Latimer"
+puts walter.name # Should return "Walter Latimer"
 
 # TRANSACTIONS
 
